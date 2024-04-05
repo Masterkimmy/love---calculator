@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <link rel="stylesheet" href="dom.css">
+    <style>
+        .error{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <h1 class="for">Love calculator!</h1>
+
+   <div class="love">
+    <div class="name">
+        <h3>Your Name:</h3>
+        <div class="enter">
+            <p>Enter Here:</p>
+            <input type="text" id="person" placeholder="Boyfriend Name">
+        </div>
+        <button class="set">SET</button>
+       </div>
+        <div class="red">
+            <h1 style="color: red;font-size: 80px;">&#x2764;</h1>
+             <button onclick="getInfo()">calculate</button>
+        </div>
+      <div class="name">
+        <h3>Any Name:</h3>
+        <div class="enter">
+            <p>Enter Here:</p>
+            <input type="text" id="partner" placeholder="Girlfriend Name">
+        </div>
+        <button class="set">SET</button>
+      </div>
+   </div>
+   </main> 
+   
+
+    <script>
+
+          function getInfo(){
+            var person = document.querySelector("#person").value;
+            var partner = document.querySelector("#partner").value;
+            if(person.length === 0 || partner.length === 0){
+                alert("Enter name")
+            }
+            else if(person.length > partner.length){
+                alert("not compatible")
+            }
+            else if(person.length === partner.length){
+                alert("compatible")
+            }
+            else if(person.length < partner.length){
+                alert('compatible')
+            }
+            else{
+                alert ('not compatible')
+            }
+          }
+        
+    </script>
+    </body>
+    </html>
